@@ -1,0 +1,95 @@
+@import url("https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap");
+:root {
+  --border: black;
+  --width: 100%;
+  --height: 100%;
+  --colorPaint: white;
+  --borderColor: #e3e3e3;
+}
+body {
+  background: white;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Amatic SC", cursive;
+  transition: 500ms;
+}
+.top-bar {
+  display: flex;
+  margin: 1.2em 2em;
+  align-items: center;
+}
+.title {
+  font-weight: 700;
+  font-size: 3.5em;
+  margin: 0;
+  flex: 1 1 0;
+  text-align: center;
+  user-select: none; /* Standard */
+}
+.dark-toggler {
+  font-size: 2em;
+  flex: 0 1 0;
+  cursor: pointer;
+}
+.dark-mode {
+  background: #212121;
+  color: #e3e3e3;
+  transition: 500ms;
+}
+.main {
+  display: flex;
+  height: auto;
+  padding-inline: 4rem;
+  justify-content: space-between;
+}
+.canvas {
+  border: 5px solid var(--border);
+  width: 700px;
+  height: 700px;
+  margin: 30px 100px;
+  padding: 30px;
+  transition: 500ms;
+}
+.options {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 30px;
+}
+.grid {
+  width: 700px;
+  height: 700px;
+  background-color: var(--border);
+  border: 1px solid yellow;
+  transition: 500ms;
+  display: flex;
+  flex-wrap: wrap;
+}
+.square {
+  width: var(--width);
+  height: var(--height);
+  flex-grow: 0;
+  border: 1px solid var(--borderColor);
+  margin: -1px;
+  display: flex;
+  flex-wrap: wrap;
+  transition: 500ms;
+}
+.square:hover {
+  background-color: var(--colorPaint);
+}
+
+.grid2 {
+  display: flex;
+  flex-wrap: wrap;
+}
+button {
+  background: none;
+  border: none;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+  font-size: 3em;
+  color: inherit;
+}
