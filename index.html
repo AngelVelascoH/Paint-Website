@@ -9,7 +9,7 @@
       crossorigin="anonymous"
     ></script>
     <link rel="stylesheet" href="styles.css" />
-    <title>Paint Website</title>
+    <title>E-Paint</title>
   </head>
   <body>
     <div class="top-bar">
@@ -18,17 +18,39 @@
     </div>
     <div class="main">
       <div class="options">
-        <h1>1</h1>
+        <h1 id="cuadrados"></h1>
 
         <button id="erase"><i class="fa-solid fa-eraser"></i></button>
       </div>
       <div class="canvas">
-        <div class="grid"></div>
+        <div class="grid">
+          <div class="main-input">
+            <div class="input-label">
+              <h1>Please select the size of the grid</h1>
+            </div>
+            <div class="text-box">
+              <div class="grid-option" id="size-1">5x5</div>
+              <div class="grid-option" id="size-2">10x10</div>
+              <div class="grid-option" id="size-3">20x20</div>
+              <div class="grid-option" id="size-4">30x30</div>
+            </div>
+            <div class="text-label">
+              <h1>
+                Use <i class="fa-solid fa-paintbrush"></i> to change the grid
+                size.
+              </h1>
+            </div>
+          </div>
+        </div>
       </div>
       <div class="options">
         <button id="increase"><i class="fa-solid fa-paintbrush"></i></button>
 
-        <button id="color-pick"><i class="fa-solid fa-palette"></i></button>
+        <button id="color-pick">
+          <input type="color" id="color-picker" /><i
+            class="fa-solid fa-palette"
+          ></i>
+        </button>
       </div>
     </div>
   </body>

@@ -4,7 +4,7 @@
   --width: 100%;
   --height: 100%;
   --colorPaint: white;
-  --borderColor: #e3e3e3;
+  --borderColor: gray;
 }
 body {
   background: white;
@@ -13,6 +13,7 @@ body {
   padding: 0;
   font-family: "Amatic SC", cursive;
   transition: 500ms;
+  perspective: 1px;
 }
 .top-bar {
   display: flex;
@@ -61,7 +62,7 @@ body {
   width: 700px;
   height: 700px;
   background-color: var(--border);
-  border: 1px solid yellow;
+  border: 1px solid var(--borderColor);
   transition: 500ms;
   display: flex;
   flex-wrap: wrap;
@@ -74,10 +75,6 @@ body {
   margin: -1px;
   display: flex;
   flex-wrap: wrap;
-  transition: 500ms;
-}
-.square:hover {
-  background-color: var(--colorPaint);
 }
 
 .grid2 {
@@ -92,4 +89,103 @@ button {
   cursor: pointer;
   font-size: 3em;
   color: inherit;
+}
+#color-pick {
+  border: 3px solid var(--borderColor);
+  border-radius: 40%;
+}
+.main-input {
+  color: var(--colorPaint);
+  display: flex;
+  align-items: center;
+  margin: auto;
+  flex-direction: column;
+}
+.input-label {
+  font-size: 1.4rem;
+}
+.text-box {
+  padding-bottom: 3em;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.grid-option {
+  width: 100px;
+  height: 100px;
+  border: 2px solid var(--colorPaint);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  transition: 300ms;
+}
+.grid-option:hover {
+  transform: perspective(1px) scale(1.1);
+  box-shadow: var(--colorPaint) 0px 10px 10px 0px;
+  transition: 300ms;
+}
+.text-label i {
+  padding-inline: 1.3em;
+}
+.show {
+  opacity: 1;
+  transition: 500ms;
+}
+.hide {
+  opacity: 0;
+  transition: 500ms;
+}
+#color-picker {
+  opacity: 0;
+  position: absolute;
+  height: 50px;
+}
+@media (max-width: 1290px) {
+  :root {
+    --border: black;
+    --width: 100%;
+    --height: 100%;
+    --colorPaint: white;
+    --borderColor: gray;
+  }
+  .main {
+    padding-inline: 1rem;
+    flex-direction: column;
+    align-items: center;
+  }
+  .main :nth-child(1) {
+    order: 2;
+  }
+  .main :nth-child(2) {
+    order: 1;
+  }
+  .main :nth-child(3) {
+    order: 2;
+  }
+  .options {
+    width: 50%;
+    margin-block-end: 15px;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .canvas {
+    width: 100%;
+    padding: 0;
+    margin: 10px;
+  }
+  .grid {
+    width: 100%;
+  }
+  .grid-option {
+    width: 65px;
+    height: 65px;
+    font-size: 1.3rem;
+  }
+  .input-label,
+  .text-label {
+    font-size: 1rem;
+    text-align: center;
+  }
 }
