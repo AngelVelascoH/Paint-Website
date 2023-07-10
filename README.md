@@ -18,3 +18,5 @@ https://angelvelascoh.github.io/PaintWebsite/
 
 Will be updating as I learn more tricks to make the page more functional.
 :)
+
+**Note:** Site is not responsive.
